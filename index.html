@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Your baseball Teacher</title>
+
+    <!-- Bootstrap core CSS
+    <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+	 -->
+    <link href="css/style.css" rel="stylesheet">
+	 <link href="" rel="">
+
+  </head>
+
+  <body>
+	
+	<div class="container">
+		<div id= "container-left" class= "container-left">
+			<div class= "container-myUser">
+			
+				<div id= "myUser_avatar" class= "myUser_avatar">
+				</div>
+				<div id="myUser_surname" class= "myUser_surname">
+				</div>
+				
+			</div>
+			
+			<div class= "container-botonera ">
+				<div id= "mover" class= "mover">
+					<img src="images/amove.png">
+				</div>
+				
+				<div id="rotar" class= "rotar">
+					<img src= "images/rotate.png">
+				</div>
+		
+				<div id="info" class= "info">
+					<img src="images/Information.png">
+				</div>				
+			</div>
+			
+			<div class= "container-ent">
+				<div id="reset" class= "reset">
+					<img src= "images/reset.png">
+				</div>
+				
+				<div id="luz" class= "luz">
+					<img src= "images/bomb.png">
+				</div>
+				
+				<div id="play" class= "play">
+					<img src= "images/play.png">
+				</div>
+				
+				<div id="stop" class= "stop">
+					<img src= "images/stop.png">
+				</div>
+				
+				<div id="hot" class= "hot">
+					<img src= "images/hot.png">
+				</div>
+				
+				<div id="hot2" class= "hot2">
+					<img src= "images/hot2.png">
+				</div>
+				
+				<div id="info-ent" class= "info-ent">
+					<img src="images/Information.png">
+				</div>	
+			</div>
+			
+			<div class= "container-info1">
+				<div class="popup-titulo">Info</div>
+				<div class="infoText"> 
+					 Welcome, Player.
+						This blackboard will help training beisbol tactics, by yourself or with your team!
+						Remember to follow your	trainer's instructions in the chat
+						
+						Your buttons are:
+
+						 <ul>
+						<li>
+						  <img src="images/amove.png" />
+						  <h3>Move</h3>
+						  <div class="panda">Allows moving your player draging with the mouse.</div>
+						</li>
+						  
+						<li>
+						  <img src="images/rotate.png" />
+						  <h3>Rotate</h3>
+						  <div class="panda">Click your mouse to rotate your player. </div>
+						</li>
+
+						
+						<li>
+						  <img src="images/Information.png"/>
+						  <h3>Info</h3>
+						  <div class="panda">Displays this info :D </div>
+						</li>
+						
+						<li>
+							<div class="infobutton1">Ok</div>		
+						</li>
+						<li>
+							<div class="personal-space"></div>		 
+						</li>
+					  </ul>
+				</div>				
+
+			 </div>
+			 
+			 <div class= "container-info2">
+				<div class="popup-titulo">Info</div>
+				<div class="infoText"> 
+				Because you are the coach you can do more interesting things to control the flow of the tactics training session.
+				Your buttons are:
+					 <ul>
+						<li>
+						  <img src="images/reset.png" />
+						  <h3>Reset</h3>
+						  <div class="panda">Allows to reset the position of all of the players on the field (for you and all who is connected).</div>
+						</li>
+						  
+						<li>
+						  <img src="images/bomb.png" />
+						  <h3>Lights</h3>
+						  <div class="panda">Click to turn on/off the lights of the stadium(for you and all who is connected), maybe you will find it usefull to get the atention of everyone! </div>
+						</li>
+					 
+						<li>
+						  <img src="images/play.png"/>
+						 <h3>Begin/Stop Strategy</h3>
+						  <div class="panda">Useful to check if your pupils know how to play some strategy. Click on play to let them do changes in their own pc. While their do it you can set
+						the players in your pc as the right way to do it. When you click at stop, all the pupils will get your players at their pc's and can see their mistakes.</div>
+						</li>
+					 
+						<li>
+						  <img src="images/hot.png" />
+						  <h3>Online</h3>
+						  <div class="panda">When the blue icon is active nobody sees the changes on the board (Play/Stop mode). When the red icon is active all the changes at the board will be seen.</div>
+						</li>
+						
+						<li>
+						  <img src="images/Information.png"/>
+						  
+						  <div class="panda">Displays this info :D </div>
+						</li>
+						
+						<li>
+							<div class="infobutton2">Ok</div>		
+						</li>
+						<li>
+							<div class="personal-space"></div>		
+						</li>
+					  </ul>
+				</div>				
+				
+				 
+			 </div>
+			
+			<div class= "container-popup">
+				<div class="popup-titulo">Tu pizarra</div>
+				<div class="flex popup-label-txt">
+					<div class="popup-label">
+						<h4>Nick:</h4>
+					</div>
+					<div class="popup-txt">
+						<input id="surname" type="text" name="surname">
+					</div>
+				</div>				
+				<div class="flex popup-label-txt">				
+					<div class="popup-label">
+						<h4>Avatar:</h4>
+					</div>
+					<div class="popup-txt"> 
+						<input id="avatar" type="txt" name="avatar">
+					</div>
+				</div>				
+				<div class="flex popup-label-txt">
+					<div class="popup-label">
+						<h4>Posicion:</h4>
+					</div>
+					<div class="popup-txt">
+						<!--<input id="color" type="txt" name="color">-->
+						<select id="posicion" name="posicion">
+						  <option value="0">Entrenador</option>
+						  <option value="1">Lanzador</option>
+						  <option value="2">Receptor</option>
+						  <option value="3">Primera base</option>
+						  <option value="4">Segunda base</option>
+						  <option value="5">Tercera base</option>
+						  <option value="6">Short stop</option>
+						  <option value="7">Left field</option>
+						  <option value="8">Center field</option>
+						  <option value="9">Right field</option>
+						</select>
+					</div>
+				</div>				
+				
+				<div class="popup-enter">Entra</div>
+			</div>
+			
+			<!-- <div class= "container-game">
+			</div> 
+			<div class= "container-chatprivado flex">
+				<!--<div class= "chatprivado">
+					<div class= "flex">
+						<div class="chatprivado-btn">_</div>
+						<div class="chatprivado-btn-x">X</div>
+					</div>
+					<div class= "chatprivado-titulo">
+			
+					</div>
+					<div class= "chatprivado-conversacion">
+			
+					</div>
+					<div class= "chat-send flex">
+						<div class= "chat-txt">
+							<input id="mensajeprivado" type="txt" name="color">
+						</div>	
+						<div class= "chat-btn">
+			
+						</div>
+					</div>
+				</div>
+				
+				<div class= "chatprivado-cerrado">
+					<div class= "flex">
+						<div class="chatprivado-btn">_</div>
+						<div class="chatprivado-btn-x">X</div>
+					</div>
+					<div class= "chatprivado-titulo">
+			
+					</div>
+					<div class= "chatprivado-conversacion">
+			
+					</div>
+					<div class= "chat-send flex">
+						<div class= "chat-txt">
+			
+						</div>	
+						<div class= "chat-btn">
+			
+						</div>
+					</div>
+				</div>
+			</div>
+			-->
+			
+		</div>
+		<div class = "container-right pestana">
+			<div id ="container-users" class= "container-users">
+			</div>
+			<div class="container-BC">
+				<div id="chat-BC" class= "chat-BC">
+				</div>
+				<div class= "chat-send flex">
+					<div class= "chat-txt">
+						<input id="bc-texto" type="text" name="fname">
+					</div>	
+					<div class= "chat-btn">
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+   
+	
+	
+  </body>
+  
+           <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/libs/sillyclient.js"></script>
+	<script src="js/three.js"></script>
+	<script src="js/OrbitControls.js"></script>
+	<script src="js/libs/stats.min.js"></script>
+	
+
+	<script src="js/threex.keyboardstate.js"></script>
+	
+	<script src="js/loaders/DDSLoader.js"></script>
+	<script src="js/loaders/MTLLoader.js"></script>
+	<script src="js/loaders/OBJLoader.js"></script>
+	
+	<script type="x-shader/x-vertex" id="vertexShader">
+			varying vec3 vWorldPosition;
+			void main() {
+				vec4 worldPosition = modelMatrix * vec4( position, 1.0 );
+				vWorldPosition = worldPosition.xyz;
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			}
+		</script>
+
+		<script type="x-shader/x-fragment" id="fragmentShader">
+			uniform vec3 topColor;
+			uniform vec3 bottomColor;
+			uniform float offset;
+			uniform float exponent;
+			varying vec3 vWorldPosition;
+			void main() {
+				float h = normalize( vWorldPosition + offset ).y;
+				gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( max( h , 0.0), exponent ), 0.0 ) ), 1.0 );
+			}
+		</script>
+		
+		<script src="js/loaders/collada/Animation.js"></script>
+		<script src="js/loaders/collada/AnimationHandler.js"></script>
+		<script src="js/loaders/collada/KeyFrameAnimation.js"></script>
+
+		<script src="js/loaders/ColladaLoader.js"></script>
+		
+	<script src="js/ObjectControls.js"></script>	
+	<script src="js/code.js"></script>
+	<script src="js/libs/stats.min.js"></script>
+	
+	
+</html>
+
