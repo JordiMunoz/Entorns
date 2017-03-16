@@ -1,0 +1,1218 @@
+/*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*/
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;/*esto arregla un cancer que no sabe ni el sangre que es :(*/
+}
+.flex{
+	display:flex;
+	position: relative;
+}
+.pestana{
+	width:7%;
+	transition: width 0.5s;
+	transition-timing-function: ease-in-out;
+}
+.pestana:hover{
+	width:25%;
+}
+div.pestana * {
+    visibility:hidden;
+}
+div.pestana:hover * {
+    visibility:visible;
+}
+
+div.pestana:hover > #bc-texto {
+    display:auto;
+}
+
+
+
+img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+/*body {
+/*	background: #ad6499; /* Old browsers */
+/*	background: -moz-linear-gradient(-45deg,  #ad6499 0%, #8658b7 47%, #492033 100%); /* FF3.6+ */
+/*	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ad6499), color-stop(47%,#8658b7), color-stop(100%,#492033)); /* Chrome,Safari4+ */
+/*	background: -webkit-linear-gradient(-45deg,  #ad6499 0%,#8658b7 47%,#492033 100%); /* Chrome10+,Safari5.1+ */
+/*	background: -o-linear-gradient(-45deg,  #ad6499 0%,#8658b7 47%,#492033 100%); /* Opera 11.10+ */
+/*	background: -ms-linear-gradient(-45deg,  #ad6499 0%,#8658b7 47%,#492033 100%); /* IE10+ */
+/*	background: linear-gradient(135deg,  #ad6499 0%,#8658b7 47%,#492033 100%); /* W3C */
+/*	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad6499', endColorstr='#492033',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+/*}
+
+#main {
+	width: 80%;
+	min-height: 400px;
+	margin: auto;
+	background-color: #EEE;
+}*/
+
+.container{
+	width: 100%;
+	height: 100%;
+	/*posicion*/
+	position: f;/* posicion normal(de direccion de lectura). Ademas sirve para poder meter right bottom y top hay que poner esto. */
+	display: flex; /* en horizontal*/
+/*background-image: url("../imgs/background-3.jpg");*/
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
+
+.container-left{
+	/*tamaño*/
+	width: 100%;
+	height:  100%;
+	/*posicion*/
+	position: relative;
+	top:0;/*Mejor ponerlo para fijar el div*/
+	left:0;/*Mejor ponerlo para fijar el div*/
+	display: block;
+	/*estilos*/
+	/*background-color: red;/*para ver la diferencia*/
+	cursor : default;
+}
+.container-right{
+	/*tamaño*/
+	/*width: 25%;*/
+	height:  100%;
+	/*posicion*/
+	position: absolute;
+	top:0;/*Mejor ponerlo para fijar el div*/
+	right:0;/*Hay que ponerlo, para pegarlo a la derecha*/
+	display: block;
+	/*estilos*/
+	background-color:rgba(255,255,255, 0.25);/*para ver la diferencia*/
+	/*comportamiento*/
+	overflow: auto;/*cuando reboso que? pues crezco loko*/
+	z-index:1;
+}
+
+
+.container-users{
+	/*tamaño*/
+	width:calc(100% - 10px);/*entero-loque okupa la imageny algo mas para el borde*/
+	height: 60%;
+	/*posicion*/
+	position: relative;
+	left: 5px; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top:0;/*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: block;
+	/*estilos*/
+	/*background-color: rgba(0, 0, 0, 0.75);/*para ver la diferencia*/
+	overflow-y: scroll;
+}
+
+.container-user{
+	/*tamaño*/
+	width: 85%;
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	left: 10%;
+	margin-top: 5px;
+    margin-bottom: 5px;
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: flex;
+	/*estilos*/
+	background-color:rgba(0,0,0, 0.25);
+	border-style: inset;
+    border-color: white;
+    border-radius: 15px;
+    border-width: 2px;
+}
+.user_avatar{
+	/*tamaño*/
+	width: 50px;
+	height: 50px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	background-color: black ;/*para ver la diferencia*/
+	border-style: inset;
+    border-color: white;
+    border-radius: 5px;
+    border-width: 1px;	
+}
+.user_surname{
+	/*tamaño*/
+	width: calc(100% - 70px);/*entero-loque okupa la imageny algo mas para el borde*/
+	height: calc(100% - 10px);
+	/*posicion*/
+	position: relative;
+	left: 10px; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top:5px; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: block;
+	/*estilos*/
+	/*background-color: gray;/*para ver la diferencia*/
+}
+
+.container-myUser{
+	/*tamaño*/
+    width: 300px;
+	height: 60px;
+	/*posicion*/
+	position: absolute;
+	left: 5px;
+	top:5px; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: flex;
+	/*estilos*/
+	/*background-color: rgba(2, 255, 122, 0.6);/*para ver la diferencia*/
+	border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    border-width: 2px;
+	background-color:rgba(255,255,255, 0.25);/*para ver la diferencia*/
+	z-index:1;
+}
+
+.container-botonera{
+	/*tamaño*/
+    width: 65px;
+	height: 220px;
+	/*posicion*/
+	position: absolute;
+	left: 5px;
+	top: 65px; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: block;
+	/*estilos*/
+	/*background-color: rgba(2, 255, 122, 0.6);/*para ver la diferencia*/
+	border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    border-width: 2px;
+	background-color:rgba(255,255,255, 0.25);/*para ver la diferencia*/
+	z-index:1;
+}
+
+.mover{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+.mover:hover{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 5px; 
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	  background: black; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, black, black, black); /* Safari */
+  background: -o-radial-gradient(circle, black, black, black); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, black, black, black); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, black, black, black); /* Standard syntax */
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.rotar{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.rotar:hover{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, red, red, green); /* Safari */
+  background: -o-radial-gradient(circle, red, red, green); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, red, red, green); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, red, red, green); /* Standard syntax */
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.info{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+.info:hover{
+	/*tamaño*/
+	width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+			background: black; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient(circle, black, black, black); /* Safari */
+	background: -o-radial-gradient(circle, black, black, black); /* Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle, black, black, black); /* Firefox 3.6 to 15 */
+	background: radial-gradient(circle, black, black, black); /* Standard syntax */
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.container-ent{
+	/*tamaño*/
+    width: 65px;
+	height: 365px;
+	/*posicion*/
+	position: absolute;
+	left: 5px;
+	top: 315px; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: block;
+	/*estilos*/
+	/*background-color: rgba(2, 255, 122, 0.6);/*para ver la diferencia*/
+	border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    border-width: 2px;
+	background-color:rgba(255,255,255, 0.25);/*para ver la diferencia*/
+	z-index:1;
+}
+
+.reset{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+.reset:hover{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+  background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.luz{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+.luz:hover{
+	/*tamaño*/
+	width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, red, red, green); /* Safari */
+  background: -o-radial-gradient(circle, red, red, green); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, red, red, green); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, red, red, green); /* Standard syntax */
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.play{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+.play:hover{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+  background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.stop{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+.stop:hover{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+  background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.hot{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+.hot:hover{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+  background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.hot2{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.info-ent{
+	/*tamaño*/
+width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 10px; 
+	left: 10px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	/*background-color: #798496;/*para ver la diferencia*/
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+.info-ent:hover{
+	/*tamaño*/
+	width:  60px; 
+	height: 60px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+			background: black; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient(circle, black, black, black); /* Safari */
+	background: -o-radial-gradient(circle, black, black, black); /* Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle, black, black, black); /* Firefox 3.6 to 15 */
+	background: radial-gradient(circle, black, black, black); /* Standard syntax */
+	margin-bottom: 5px;
+	border-radius: 28px;
+}
+
+.myUser_avatar{
+	/*tamaño*/
+	width: 50px;
+	height: 50px;
+	/*posicion*/
+	position: relative;
+	top: 5px;
+	left: 5px;
+	
+	/*top:0; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block; viene heredado*/
+	/*estilos*/
+	background-color: black;/*para ver la diferencia*/
+}
+.myUser_surname{
+	/*tamaño*/
+	width: calc(100% - 70px);/*entero-loque okupa la imageny algo mas para el borde*/
+	height: calc(100% - 10px);
+	/*posicion*/
+	position: relative;
+	left: 10px; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top:5px; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: block;
+	/*estilos*/
+	/*background-color: gray;/*para ver la diferencia*/
+}
+
+.container-popup{
+	/*tamaño*/
+	width:calc(40% - 60px);/*entero-loque okupa la imageny algo mas para el borde*/
+	height: 50%;
+	/*posicion*/
+	position: relative;
+	left: 30%; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top:10px; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: block;
+	/*estilos*/
+	background-color:rgba(255,255,255, 0.5);/*para ver la diferencia*/
+	border-style: solid;
+    border-color:black;
+    border-radius: 15px;
+    border-width: 2px;
+	z-index:1;
+}
+.popup-titulo{
+	/*tamaño*/
+	width: 50%;/*entero-loque okupa la imageny algo mas para el borde*/
+	/*posicion*/
+	height: 50px;
+	position: relative;
+	left: 25%; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top: 30px; /*Mejor ponerlo para fijar el div*/
+	margin-bottom: 40px;
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: block;
+	/*estilos*/
+	/*background-color: rgba(255, 255, 255, 0.6);/*para ver la diferencia*/
+	font: bold 34px "Century Schoolbook", Georgia, Times, serif;
+	color: #333;
+	line-height: 90%;
+	margin: .2em 0 .4em 0;
+	letter-spacing: -2px;	
+	text-align:center;
+}
+.popup-label-txt{
+	/*tamaño*/
+	width: 50%;/*entero-loque okupa la imageny algo mas para el borde*/
+	/*posicion*/
+	height: 50px;
+	position: relative;
+	left: 25%; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top:20px; /*Mejor ponerlo para fijar el div*/
+	margin-bottom: 20px;
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block;*/
+	/*estilos*/
+	/*background-color: rgba(0, 0, 0	, 0.6);/*para ver la diferencia*/
+}
+.popup-label{
+    width: 30%;
+    height: 50px;
+    position: relative;
+	top:10px;
+   /* background-color: rgba(255, 0, 0	, 0.6);*/
+}
+.popup-txt{
+	width: 100%;
+    height: 50px;
+    position: relative;
+	top:0;
+    /*background-color: rgba(0, 0, 255	, 0.6);*/
+	top:20px;
+	
+}
+.popup-txt > input{
+	width:85%;
+	height:50%;
+/*cosas bonitas*/
+	box-shadow:1px 1px 45px #333;
+	transition: 200ms all ease;
+	border:none;
+	padding: 5px 5px;
+}
+.popup-txt > input:hover{
+	margin:-5px 0 0 -5px;
+	height:65%;
+	width:100%;
+}
+
+.popup-txt > input:focus
+{	
+	margin:-5px 0 0 -5px;
+	height:65%;
+	width:100%;
+}
+
+.popup-txt > select{
+	width:85%;
+	height:50%;
+/*cosas bonitas*/
+	box-shadow:1px 1px 45px #333;
+	transition: 200ms all ease;
+	border:none;
+	padding: 5px 5px;
+}
+.popup-txt > select:hover{
+	margin:-5px 0 0 -5px;
+	height:65%;
+	width:100%;
+}
+
+.popup-txt > select:focus
+{	
+	margin:-5px 0 0 -5px;
+	height:65%;
+	width:100%;
+}
+
+.popup-enter{
+		/*tamaño*/
+	width: 25%;/*entero-loque okupa la imageny algo mas para el borde*/
+	/*posicion*/
+	height: 50px;
+	position: relative;
+	left: 37.5%; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top:40px; /*Mejor ponerlo para fijar el div*/
+	margin-top: 20px;
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	/*display: block;*/
+	/*estilos*/
+	background: #000000;
+	text-decoration: none;
+	color: #ffffff;
+	text-align:center;
+	border-radius: 8px;
+	font: bold 20px "Century Schoolbook", Georgia, Times, serif;
+	font-size: 23px;
+	padding: 4px 20px 10px 20px;
+	text-decoration: none;
+	margin-top: 20px;
+}
+
+.popup-enter:hover {
+	/*tamaño*/
+	width: 25%;/*entero-loque okupa la imageny algo mas para el borde*/
+	/*posicion*/
+	height: 50px;
+	position: relative;
+	left: 37.5%; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top:40px; /*Mejor ponerlo para fijar el div*/
+	margin-top: 20px;
+  
+    background: #333333;
+	border-radius: 8px;
+	font: bold 20px "Century Schoolbook", Georgia, Times, serif;
+	color: #ffffff;
+	font-size: 23px;
+	padding: 4px 20px 10px 20px;
+	text-decoration: none;
+}
+
+.container-game{
+	/*tamaño*/ 
+	width:100%;/*entero-loque okupa la imageny algo mas para el borde*/
+	height:calc(50% - 60px);
+	/*posicion*/
+	position: relative;
+	left: 5px; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top:10px; /*Mejor ponerlo para fijar el div*/
+	/*right:0;/*no es necesario pegarlo a la derecha*/
+	display: block;
+	/*estilos*/
+	background-color: rgba(0, 0, 0, 0.75);/*para ver la diferencia*/	
+}
+
+
+.container-BC{
+	width: calc(100% - 10px);
+    height: calc(40% - 10px);
+    position: relative;
+    left: 5px;
+    
+    top: 5px;
+    /* display: block; */
+    /*background-color: rgba(0, 255, 0	, 1);*/
+	background-color:rgba(255,255,255, 0.75);/*para ver la diferencia*/
+	
+	border-style: solid;
+    border-color:black;
+    border-radius: 15px;
+    border-width: 2px;
+	display: block;
+}
+.chat-BC{
+	/*tamaño*/
+	width: 95%;/*entero-loque okupa la imageny algo mas para el borde*/
+	/*posicion*/
+	height: 85%;
+	position: relative;
+	left: 0; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top: 0; /*Mejor ponerlo para fijar el div*/
+	display: block;
+	/*estilos*/
+	background-color:rgba(255,255,255, 0.25);
+	overflow-y:scroll;
+}
+.chat-BC > p{
+	text-indent: 10px; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+}
+
+.container-chatprivado{
+	width: calc(100% - 10px);
+    height: calc(46% - 70px);
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+	
+}
+
+.chatprivado{
+	width: 25%;
+    height: calc(100% - 5px);
+    position: relative;
+    left: 5px;
+    bottom: 0;
+    /* display: block; */
+		/*estilos*/
+	background-color:rgba(255,255,255, 0.25);
+	border-style: solid;
+    border-color:black;
+    border-radius: 15px;
+    border-width: 2px;
+}
+
+.chatprivado-cerrado{
+	width: 25%;
+    height: 20px;
+    position: relative;
+    left: 5px;
+    top: calc(95% - 10px);
+    /* display: block; */
+		/*estilos*/
+	background-color:rgba(255,255,255, 0.25);
+	border-style: solid;
+    border-color:black;
+    border-radius: 15px;
+    border-width: 2px;
+}
+
+.chatprivado-btn-x{
+	width: 10px;
+    height: 10px;
+    position: absolute;
+	right:5px;
+    /* display: block; */
+		/*estilos*/
+}
+
+.chatprivado-btn{
+	width: 10px;
+    height: 10px;
+    position: absolute;
+	right:15px;
+    /* display: block; */
+		/*estilos*/
+}
+
+
+.chatprivado-titulo{
+	/*tamaño*/
+	width: 90%;/*entero-loque okupa la imageny algo mas para el borde*/
+	/*posicion*/
+	height: 20px;
+	position: relative;
+	left: 5px; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top: 0; /*Mejor ponerlo para fijar el div*/
+	display: block;
+	/*estilos*/
+	background-color:rgba(255,255,255, 0.25);
+}
+.chatprivado-conversacion{
+	/*tamaño*/
+	width: calc(100% - 10px);/*entero-loque okupa la imageny algo mas para el borde*/
+	/*posicion*/
+	height: 80%;
+	position: relative;
+	left: 5px; /*no es mas porque hace left respecto al anterior (por estar en relativo)*/
+	top: 0; /*Mejor ponerlo para fijar el div*/
+	display: block;
+	/*estilos*/
+	background-color:rgba(255,255,255, 0.25);
+	overflow-y:scroll;
+}
+
+.chat-send{
+	width: calc(100% - 10px);
+    height: calc(20% - 30px);
+    position: absolute;
+    left: 5px;
+    top: 87%;
+	/*estilos*/
+	/*background-color: rgba(255,255, 0, 0.9);/*para ver la diferencia*/	*/
+}
+
+.chat-btn{
+	width: 20%;
+    height: 100%;
+    position: relative;    
+    top: 0;
+	/*estilos*/
+	/*background-color: rgba(0,0, 255, 0.9);/*para ver la diferencia*/	
+	
+	background: #000000;
+	text-decoration: none;
+	color: #ffffff;
+	text-align:center;
+	border-radius: 8px;
+	font: bold 10px "Century Schoolbook", Georgia, Times, serif;
+	font-size: 10px;
+	/*padding: 4px 20px 10px 20px;*/
+	text-decoration: none;
+	/*margin-top: 20px;*/
+}
+.chat-btn:hover{
+	width: 20%;
+    height: 100%;
+    position: relative;    
+    top: 0;
+	/*estilos*/
+	background-color: rgba(0,0, 255, 0.9);/*para ver la diferencia*/	
+	
+	background: #333333;
+	border-radius: 8px;
+	font: bold 10px "Century Schoolbook", Georgia, Times, serif;
+	color: #ffffff;
+	font-size: 10px;
+	/*padding: 4px 20px 10px 20px;*/
+	text-decoration: none;
+}
+.chat-cam{
+	width: 20%;
+    height: 100%;
+    position: relative;    
+    top: 0;
+	/*estilos*/
+	/*background-color: rgba(0,0, 255, 0.9);/*para ver la diferencia*/	
+	
+	background: #000000;
+	text-decoration: none;
+	color: #ffffff;
+	text-align:center;
+	border-radius: 8px;
+	font: bold 10px "Century Schoolbook", Georgia, Times, serif;
+	font-size: 10px;
+	/*padding: 4px 20px 10px 20px;*/
+	text-decoration: none;
+	/*margin-top: 20px;*/
+}
+.chat-cam:hover{
+	width: 20%;
+    height: 100%;
+    position: relative;    
+    top: 0;
+	/*estilos*/
+	background-color: rgba(0,0, 255, 0.9);/*para ver la diferencia*/	
+	
+	background: #333333;
+	border-radius: 8px;
+	font: bold 10px "Century Schoolbook", Georgia, Times, serif;
+	color: #ffffff;
+	font-size: 10px;
+	/*padding: 4px 20px 10px 20px;*/
+	text-decoration: none;
+}
+.chat-cam-bc{
+	width: 20%;
+    height: 20%;
+    position: relative;    
+    top: 20;
+	/*estilos*/
+	/*background-color: rgba(0,0, 255, 0.9);/*para ver la diferencia*/	
+	
+	background: #000000;
+	text-decoration: none;
+	color: #ffffff;
+	text-align:center;
+	border-radius: 8px;
+	font: bold 10px "Century Schoolbook", Georgia, Times, serif;
+	font-size: 10px;
+	/*padding: 4px 20px 10px 20px;*/
+	text-decoration: none;
+	/*margin-top: 20px;*/
+}
+.chat-cam-bc:hover{
+	width: 20%;
+    height: 20%;
+    position: relative;    
+    top: 20;
+	/*estilos*/
+	background-color: rgba(0,0, 255, 0.9);/*para ver la diferencia*/	
+	
+	background: #333333;
+	border-radius: 8px;
+	font: bold 10px "Century Schoolbook", Georgia, Times, serif;
+	color: #ffffff;
+	font-size: 10px;
+	/*padding: 4px 20px 10px 20px;*/
+	text-decoration: none;
+}
+
+.chat-txt{
+	width: 80%;
+    height: 100%;
+    position: relative;    
+    top: 0;
+	/*estilos*/
+	/*background-color: rgba(255,255, 255, 0.9);/*para ver la diferencia*/	
+}
+.chat-txt > input{
+/*cosas bonitas*/
+	height: 70%;
+	width:calc(100% - 15px);
+	box-shadow:1px 1px 45px #333;
+	transition: 200ms all ease;
+	border:none;
+	padding: 5px 5px;
+}
+
+canvas{
+	height: 100%;
+	width: 100%;
+	left:0px;
+	top:0px;
+	position:absolute;
+	z-index:0;
+}
+ 
+.container-info2{
+	/*tamaño*/
+	width:calc(40% - 60px);
+	height: 50%;
+	/*posicion*/
+	position: relative;
+	left: 30%; 
+	top:10px; 	
+	display: block;
+	/*estilos*/
+	background-color:rgba(255,255,255, 0.5);
+	border-style: solid;
+    border-color:black;
+    border-radius: 15px;
+    border-width: 2px;
+	z-index:1;
+	overflow: auto;
+}
+.container-info1{
+	/*tamaño*/
+	width:calc(40% - 60px);
+	height: 50%;
+	/*posicion*/
+	position: relative;
+	left: 30%; 
+	top:10px; 
+	display: block;
+	/*estilos*/
+	background-color:rgba(255,255,255, 0.5);
+	border-style: solid;
+    border-color:black;
+    border-radius: 15px;
+    border-width: 2px;
+	z-index:1;
+	overflow: auto;
+} 
+.infoText {
+	height: 50%;
+	color: #685206; 
+	font-family: 'Helvetica Neue', sans-serif; 
+	font-size: 14px; 
+	line-height: 24px; 
+	margin: 0 24px 24px 24px;
+	text-align: justify;
+	text-justify: inter-word;
+ }
+
+.infobutton1{
+	/*tamaño*/
+	width: 25%;
+	/*posicion*/
+	height: 50px;
+	position: relative;
+	left: 37.5%; 
+	top:40px; 
+	margin-top: 20px;
+	/*estilos*/
+	background: #000000;
+	text-decoration: none;
+	color: #ffffff;
+	text-align:center;
+	border-radius: 8px;
+	font: bold 20px "Century Schoolbook", Georgia, Times, serif;
+	font-size: 23px;
+	padding: 4px 20px 10px 20px;
+	text-decoration: none;
+	margin-top: 20px;
+}
+.infobutton1:hover{
+	/*tamaño*/
+	width: 25%;
+	/*posicion*/
+	height: 50px;
+	position: relative;
+	left: 37.5%;
+	top:40px; 
+	margin-top: 20px;
+  
+    background: #333333;
+	border-radius: 8px;
+	font: bold 20px "Century Schoolbook", Georgia, Times, serif;
+	color: #ffffff;
+	font-size: 23px;
+	padding: 4px 20px 10px 20px;
+	text-decoration: none;
+}
+.infobutton2{
+		/*tamaño*/
+	width: 25%;
+	/*posicion*/
+	height: 50px;
+	position: relative;
+	left: 37.5%; 
+	top:40px; 
+	margin-top: 20px;
+	/*estilos*/
+	background: #000000;
+	text-decoration: none;
+	color: #ffffff;
+	text-align:center;
+	border-radius: 8px;
+	font: bold 20px "Century Schoolbook", Georgia, Times, serif;
+	font-size: 23px;
+	padding: 4px 20px 10px 20px;
+	text-decoration: none;
+	margin-top: 20px;
+}
+.infobutton2:hover{
+	/*tamaño*/
+	width: 25%;
+	/*posicion*/
+	height: 50px;
+	position: relative;
+	left: 37.5%; 
+	top:40px; 
+	margin-top: 20px;
+	margin-bot: 20px;
+    background: #333333;
+	border-radius: 8px;
+	font: bold 20px "Century Schoolbook", Georgia, Times, serif;
+	color: #ffffff;
+	font-size: 23px;
+	padding: 4px 20px 10px 20px;
+	text-decoration: none;
+}
+
+.infoText > ul {
+	display:block;
+  list-style-type: none;
+  width: 500px;
+}
+ 
+.infoText >  h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  display:flex;
+}
+ 
+.infoText > li img {
+  float: left;
+}
+ 
+.infoText > .panda {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+    left: 70px;
+}
+ 
+.infoText > li {
+  padding: 10px;
+  /*overflow: auto;*/
+  display:flex;
+}
+ 
+.infoText > li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.personal-space{
+	height:70px;
+}
